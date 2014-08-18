@@ -1,0 +1,39 @@
+{
+  "name": "EzBakeSecurity-UserInterface",
+  "version": "0.0.1",
+  "description": "The user interface for interacting with several EzBake Security thrift services.",
+  "main": "main.js",
+  "environment": "development",
+  "scripts": {
+    "start": "node main.js",
+    "test": "mocha --debug --reporter spec --recursive ./parsers/ ./routes/ ./security/ ./views/"
+  },
+  "engines": {
+    "node": ">=0.10.0",
+    "engineStrict": true
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ezbake/ezbake-thrift-web-ui.git"
+  },
+  "author": "Kris Siegel",
+  "dependencies": {
+    "hapi": "^6.2.0",
+    "msngr": "^0.2.0",
+    "ejs": "^1.0.0",
+    "ezbakesecurityclient": "git+ssh://git@git.INSERT_NEW_REPO_URL_HERE:ezbake/ezbake-security.git#nodejs_repo",
+    "ezConfiguration":"git+ssh://git@git.INSERT_NEW_REPO_URL_HERE:ezbake/ezbake-configuration.git#2.0-nodejs_repo",
+    "thriftutils": "git+ssh://git@git.INSERT_NEW_REPO_URL_HERE:ezbake/thriftutils.git#2.0-nodejs_repo",
+    "thrift": "^0.9.1",
+    "async": "^0.9.0"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "chai": "^1.9.1",
+    "grunt-contrib-clean": "^0.5.0",
+    "grunt-contrib-concat": "^0.5.0",
+    "grunt-contrib-uglify": "^0.5.0",
+    "grunt-contrib-copy": "^0.5.0",
+    "grunt-shell": "^0.7.0"
+  }
+}
